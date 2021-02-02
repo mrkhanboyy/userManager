@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+//    id "com.commercehub.gradle.plugin.avro" version "0.9.1"
+}
+
+group 'com.usermanager'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    // jersey server and grizzly server
+    implementation 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.32'
+    implementation group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.27'
+    implementation group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.32'
+
+
+//     https://mvnrepository.com/artifact/org.apache.avro/avro
+    implementation group: 'org.apache.avro', name: 'avro', version: '1.10.0'
+
+//jackson
+    implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.32'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+//
+//task generateAvro(type: com.commercehub.gradle.plugin.avro.GenerateAvroJavaTask) {
+//    //point plugin to folder with avro schemas
+//    source("src/main/resources/avro")
+//    //point plugin to folder with generated POJOs
+//    outputDir = file("src/main/java/")
+//}
+//compileJava.source(generateAvro.outputs)
