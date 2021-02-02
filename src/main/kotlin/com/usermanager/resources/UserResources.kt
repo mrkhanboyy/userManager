@@ -20,20 +20,8 @@ class UserResources {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     fun createNewUser(requestData: String): Response {
-        try {
             val user = objectMapper.readValue(requestData, User::class.java)
-            //404 Not Exception
-            //400 Bad Request
-            userService.addUser(user)
-            return Response.ok().entity(user.toString()).build()
-        } catch (e: Exception) {
-            when(e){
-                is UserNotFoundException -> {
-
-                }
-                is InvalidRException -> {}
-            }
-        }
+            return Response.ok().entity(userService.addUser(user).toString()).build()
     }
 
 
