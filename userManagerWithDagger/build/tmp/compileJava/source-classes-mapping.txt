@@ -1,0 +1,30 @@
+com/usermanager/di/module/HttpModule_ProvideResourceFactory.java
+ com.usermanager.di.module.HttpModule_ProvideResourceFactory
+com/usermanager/di/module/RepositoryModule_UserRepoFactory.java
+ com.usermanager.di.module.RepositoryModule_UserRepoFactory
+com/usermanager/service/UserService_Factory.java
+ com.usermanager.service.UserService_Factory
+com/usermanager/resources/UserResources_Factory.java
+ com.usermanager.resources.UserResources_Factory
+com/usermanager/exceptions/exceptionmappers/UserExceptionMapper_Factory.java
+ com.usermanager.exceptions.exceptionmappers.UserExceptionMapper_Factory
+com/usermanager/di/component/DaggerAppComponent.java
+ com.usermanager.di.component.DaggerAppComponent
+ com.usermanager.di.component.DaggerAppComponent$1
+ com.usermanager.di.component.DaggerAppComponent$Builder
+com/usermanager/di/module/configModule_ProvideHostFactory.java
+ com.usermanager.di.module.configModule_ProvideHostFactory
+com/usermanager/di/module/ServiceModule_UserServiceFactory.java
+ com.usermanager.di.module.ServiceModule_UserServiceFactory
+com/usermanager/models/User.java
+ com.usermanager.models.User
+ com.usermanager.models.User$1
+ com.usermanager.models.User$Builder
+com/usermanager/models/ErrorResponse.java
+ com.usermanager.models.ErrorResponse
+com/usermanager/di/module/HttpModule_ServerFactory.java
+ com.usermanager.di.module.HttpModule_ServerFactory
+com/usermanager/di/module/configModule_ProvidePortFactory.java
+ com.usermanager.di.module.configModule_ProvidePortFactory
+com/usermanager/di/module/ObjectMapperProvider_ProvidesObjectMapperFactory.java
+ com.usermanager.di.module.ObjectMapperProvider_ProvidesObjectMapperFactory
